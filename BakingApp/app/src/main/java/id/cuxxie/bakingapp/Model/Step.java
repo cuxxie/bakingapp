@@ -1,4 +1,4 @@
-package com.cxt.bakingapp.Model;
+package id.cuxxie.bakingapp.Model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,13 +7,13 @@ import android.os.Parcelable;
  * Created by hendri on 8/4/17.
  */
 
-public class Requirement implements Parcelable {
+public class Step implements Parcelable {
 
 
-    public Requirement() {
+    public Step() {
     }
 
-    public Requirement(Parcel in) {
+    public Step(Parcel in) {
     }
 
     @Override
@@ -29,12 +29,12 @@ public class Requirement implements Parcelable {
     public static final Creator CREATOR
             = new Creator() {
 
-        public Requirement createFromParcel(Parcel in) {
-            return new Requirement(in);
+        public Step createFromParcel(Parcel in) {
+            return new Step(in);
         }
 
-        public Requirement[] newArray(int size) {
-            return new Requirement[size];
+        public Step[] newArray(int size) {
+            return new Step[size];
         }
     };
 }
