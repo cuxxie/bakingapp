@@ -1,5 +1,6 @@
 package id.cuxxie.bakingapp.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +16,7 @@ import id.cuxxie.bakingapp.Data.DataRetrieverListener;
 import id.cuxxie.bakingapp.Model.Instruction;
 import id.cuxxie.bakingapp.R;
 
-public class MainActivity extends AppCompatActivity implements DataRetrieverListener.APICallback {
+public class MainActivity extends AppCompatActivity implements DataRetrieverListener.APICallback, ActivityTransitionInterface {
     @BindView(R.id.instruction_recyclerview) RecyclerView recyclerView;
     InstructionRecyclerAdapter adapter;
     LinearLayoutManager mLayoutManager;
@@ -80,5 +81,13 @@ public class MainActivity extends AppCompatActivity implements DataRetrieverList
     @Override
     public void errorOnAPICall() {
 
+    }
+
+    @Override
+    public void movingToDetailsWithPosition(int position) {
+        Intent intent = new Intent(this,StepsActivity.class);
+        intent.putExtra("steps",adapter.getInstructions().get(position).getSteps());
+        intent.putExtra("requirements",adapter.getInstructions().get(position).getRequirements());
+        startActivity(intent);
     }
 }

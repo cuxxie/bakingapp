@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import id.cuxxie.bakingapp.Activity.ActivityTransitionInterface;
 import id.cuxxie.bakingapp.Model.Instruction;
 import id.cuxxie.bakingapp.R;
 
@@ -25,11 +26,11 @@ import id.cuxxie.bakingapp.R;
 
 public class InstructionRecyclerAdapter extends RecyclerView.Adapter<InstructionRecyclerAdapter.ViewHolder> {
     ArrayList<Instruction> instructions;
-    private final Activity activity;
+    ActivityTransitionInterface activityCallback;
     private final Context context;
-    public InstructionRecyclerAdapter(Activity activity, Context context, ArrayList<Instruction> instructions) {
+    public InstructionRecyclerAdapter(ActivityTransitionInterface activity, Context context, ArrayList<Instruction> instructions) {
         this.instructions = instructions;
-        this.activity = activity;
+        this.activityCallback = activity;
         this.context = context;
     }
 
@@ -83,6 +84,7 @@ public class InstructionRecyclerAdapter extends RecyclerView.Adapter<Instruction
     }
 
     public void instructionItemTouchedAt(int position) {
+        activityCallback.movingToDetailsWithPosition(position);
     }
 
     public void setInstructions(ArrayList<Instruction> instructions) {

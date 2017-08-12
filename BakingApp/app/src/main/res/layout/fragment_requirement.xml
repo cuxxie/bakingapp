@@ -2,12 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.cuxxie.bakingapp.Fragment.StepsFragment">
+    tools:context="id.cuxxie.bakingapp.Fragment.RequirementFragment">
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/steps_recycleview">
+        android:id="@+id/req_recycleview">
 
     </android.support.v7.widget.RecyclerView>
-
 </FrameLayout>

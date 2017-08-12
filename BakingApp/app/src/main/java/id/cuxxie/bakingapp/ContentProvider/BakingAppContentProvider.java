@@ -146,9 +146,8 @@ public class BakingAppContentProvider  extends ContentProvider{
         int match = mUriMatcher.match(uri);
         int taskUpdated;
         switch (match) {
-            case REQUIREMENT_WITH_ID:
-                String reqid = uri.getPathSegments().get(1);
-                taskUpdated = db.update(RequirementContract.RequirementEntry.TABLE_NAME,values, "id=?", new String[]{reqid});
+            case ALL_REQ_UNDER_INSTR:
+                taskUpdated = db.update(RequirementContract.RequirementEntry.TABLE_NAME,values, "id=?",selectionArgs);
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown uri: " + uri);

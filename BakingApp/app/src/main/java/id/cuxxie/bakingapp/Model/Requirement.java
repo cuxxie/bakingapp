@@ -25,9 +25,12 @@ public class Requirement implements Parcelable {
     }
 
     public Requirement(Parcel in) {
+        this.id = in.readInt();
+        this.instructionid = in.readInt();
         this.quantity = in.readInt();
         this.measure = in.readString();
         this.name = in.readString();
+        this.status = in.readInt()==1;
     }
 
     public Requirement(int id,int quantity, String measure, String name, int status, int instructionid) {
@@ -46,9 +49,15 @@ public class Requirement implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(this.getId());
+        parcel.writeInt(this.getInstructionid());
         parcel.writeInt(this.quantity);
         parcel.writeString(this.measure);
         parcel.writeString(this.name);
+        if(status)
+            parcel.writeInt(1);
+        else
+            parcel.writeInt(0);
     }
 
     public static final Creator CREATOR

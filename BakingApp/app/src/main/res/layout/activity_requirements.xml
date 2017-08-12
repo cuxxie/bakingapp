@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.cuxxie.bakingapp.Activity.StepsActivity">
-<fragment
-    android:id="@+id/steps_fragment"
-    android:name="id.cuxxie.bakingapp.Fragment.StepsFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    tools:context="id.cuxxie.bakingapp.Activity.RequirementsActivity">
+    <fragment
+        android:id="@+id/req_fragment"
+        android:name="id.cuxxie.bakingapp.Fragment.RequirementFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </android.support.constraint.ConstraintLayout>

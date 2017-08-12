@@ -225,17 +225,13 @@ public class DataRetriever implements Callback , CustomAsyncQueryHandler.AsyncQu
         return mCursor.getCount() > 0;
     }
 
-    public void updateRequirementStatusToTrue(Requirement requirement, Context context)
+    public void updateRequirementStatus(Requirement requirement, Context context, boolean status, Object caller)
     {
-        requirement.setStatus(true);
+        requirement.setStatus(status);
         ContentValues cv = DBUtility.convertRequirementToContentValues(requirement);
         String id = String.valueOf(requirement.getId());
-        int count = context.getContentResolver().update(
-                RequirementContract.RequirementEntry.CONTENT_URI,
-                cv,
-                "id=?",
-                new String[]{id}
-        );
+        CustomAsyncQueryHandler customAsyncQueryHandler = new CustomAsyncQueryHandler(context.getContentResolver(),this);
+        customAsyncQueryHandler.startUpdate(caller.hashCode(),null, RequirementContract.RequirementEntry.CONTENT_URI,cv,"id=?",new String[]{id});
     }
 
     public void loadAllInstruction(DataRetrieverListener listener, Context context, Object caller)

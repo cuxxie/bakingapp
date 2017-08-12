@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="200dp">
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/instruction_card"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:padding="16dp"
-        card_view:cardCornerRadius="4dp">
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        card_view:cardElevation="6dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardBackgroundColor="#6897EF">
         <RelativeLayout
+            android:padding="6dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/fullyTransparent">
         <ImageView android:id="@+id/instruction_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@color/fullyTransparent"/>
         <TextView
+            android:gravity="center_horizontal|bottom"
             android:id="@+id/instruction_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:background="@color/fullyTransparent"
+            android:textAppearance="?android:textAppearanceLargeInverse"
+            />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

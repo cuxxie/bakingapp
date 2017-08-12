@@ -24,7 +24,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.StepsActivity" />
-        <activity android:name=".Activity.DetailActivity"></activity>
+        <activity android:name=".Activity.DetailActivity" />
+        <activity android:name=".Activity.RequirementsActivity" />
+        <activity android:name=".Activity.RequirementActivity"></activity>
     </application>
 
 </manifest>
