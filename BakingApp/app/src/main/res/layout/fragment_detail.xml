@@ -3,11 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="id.cuxxie.bakingapp.Fragment.DetailFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="6dp">
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/details_exovideo"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:visibility="gone"/>
+        <TextView
+                android:id="@+id/details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+    </LinearLayout>
+    </ScrollView>
+
 
 </FrameLayout>

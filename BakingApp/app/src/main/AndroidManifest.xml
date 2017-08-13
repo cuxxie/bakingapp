@@ -26,7 +26,15 @@
         <activity android:name=".Activity.StepsActivity" />
         <activity android:name=".Activity.DetailActivity" />
         <activity android:name=".Activity.RequirementsActivity" />
-        <activity android:name=".Activity.RequirementActivity"></activity>
+        <receiver android:name=".Widget.RequirementWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+            <meta-data android:name="LauncherMetadata.Requirements.Scrollable"
+                android:value="true" />
+        </receiver>
     </application>
 
 </manifest>

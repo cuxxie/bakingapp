@@ -54,10 +54,9 @@ public class ExampleInstrumentedTest implements DataRetrieverListener.APICallbac
     }
 
     @Override
-    public void errorOnAPICall(Exception ex) {
-        signal.countDown();
-    }
+    public void errorOnAPICall() {
 
+    }
     @Override
     public void didCompleteDataQueryWithInstruction(ArrayList<Instruction> instructions) {
         signal.countDown();

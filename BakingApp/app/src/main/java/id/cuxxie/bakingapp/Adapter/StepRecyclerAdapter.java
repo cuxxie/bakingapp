@@ -28,11 +28,13 @@ public class StepRecyclerAdapter extends RecyclerView.Adapter<StepRecyclerAdapte
 
     public StepRecyclerAdapter(ArrayList<Step> steps, ActivityTransitionInterface activity, Context context) {
         this.steps = steps;
-        Step ingredientStep = new Step();
-        ingredientStep.setShortDescription("Recipe Ingredients");
-        this.steps.add(0,ingredientStep);
         this.activityCallback = activity;
         this.context = context;
+
+        Step ingredientStep = new Step();
+        ingredientStep.setShortDescription("Recipe Ingredients");
+        if(!this.steps.get(0).getShortDescription().equals(ingredientStep.getShortDescription()))
+            this.steps.add(0,ingredientStep);
     }
 
     //TODO add UI for step list

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BakingApp</string>
     <string name="instruction_title">%1$s (%2$s Servings)</string>
-
+    <string name="ingredient_widget">%1$s - %2$s %3$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

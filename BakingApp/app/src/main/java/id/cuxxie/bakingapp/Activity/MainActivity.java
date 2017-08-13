@@ -1,6 +1,8 @@
 package id.cuxxie.bakingapp.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements DataRetrieverList
         dataRetrieverListener = new DataRetrieverListener(this);
         if(savedInstanceState == null)
             DataRetriever.getInstance(this).downloadDataAndSaveDeltaToDB(this,dataRetrieverListener);
+
+
+//        if(sharedPreferences.contains("instructionId"))
     }
 
     public void loadDataFromDB()

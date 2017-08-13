@@ -1,29 +1,13 @@
 # README #
+This repo is for udacity android fast track project Baking App
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This initial version is used to submit to get marked as finished.
+While the time used for development is extremely restricted (2x24 hours) to complete, so all the UI and structure is still very messed up.
 
-### What is this repository for? ###
+Will enhance and add additional feature in the near future.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Reason why need to complete in 2x24 hours: 
+Contest for scholar who passed all the projects & exam will be raffled to get Google for Indonesia invitation.
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Deadline 15 August.
+Start working on this: 12 August.
