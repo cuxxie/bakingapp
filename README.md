@@ -11,3 +11,6 @@ Contest for scholar who passed all the projects & exam will be raffled to get Go
 
 Deadline 15 August.
 Start working on this: 12 August.
+
+
+Will update it to Clean Architecture :D maybe within a month
